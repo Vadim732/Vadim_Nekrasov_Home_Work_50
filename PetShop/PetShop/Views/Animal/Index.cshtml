@@ -28,6 +28,7 @@
                 <td>@a.Price</td>
                 <td>
                     <a asp-action="Details" asp-controller="Animal" asp-route-animalId="@a.Id" class="btn btn-outline-dark">Details</a>
+                    <a asp-action="Delete" asp-controller="Animal" asp-route-animalId="@a.Id" class="btn btn-outline-danger">Delete</a>
                 </td>
             </tr>
         }

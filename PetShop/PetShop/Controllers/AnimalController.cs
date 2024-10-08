@@ -45,4 +45,18 @@ public class AnimalController : Controller
 
         return NotFound();
     }
+
+    public IActionResult Delete(int animalId)
+    {
+        Animal animal = _context.Animals.FirstOrDefault(a => a.Id == animalId);
+        {
+            if (animal != null)
+            {
+                _context.Remove(animal);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
+    }
 }

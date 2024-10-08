@@ -6,11 +6,15 @@
 
 <div class="row mt-5">
     <div class="bg-dark text-white">
-        <p><strong>Id:</strong>@Model.Id</p>
-        <p><strong>Type animal:</strong>@Model.TypeAnimal</p>
-        <p><strong>Breed:</strong>@Model.Breed</p>
-        <p><strong>Age:</strong>@Model.Age</p>
-        <p><strong>Price:</strong>@Model.Price</p>
-        <p><strong>About pet:</strong>@Model.Description</p>
+        <img href="..." class="img-fluid mb-5" alt="Photo of a pet">
+        <p><strong>Id: </strong>@Model.Id</p>
+        <p><strong>Type animal: </strong>@Model.TypeAnimal</p>
+        <p><strong>Breed: </strong>@Model.Breed</p>
+        <p><strong>Age: </strong>@Model.Age</p>
+        <p><strong>Price: </strong>@Model.Price</p>
+        <div class="mt-5">
+            <h4 class="text-center">About pet</h4>
+            <p>@Model.Description</p>
+        </div>
     </div>
 </div>

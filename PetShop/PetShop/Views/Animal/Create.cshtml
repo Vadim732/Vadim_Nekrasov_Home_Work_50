@@ -1,0 +1,49 @@
+﻿@model Animal
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
+            <div class="form_row">
+                <label for="">
+                    Enter pet name:
+                    <input asp-for="Name" type="text">
+                </label>
+            </div>
+            <div class="form_row">
+                <label for="">
+                    Indicate age pet:
+                    <input asp-for="Age" type="number">
+                </label>
+            </div>
+            <div class="form_row">
+                <label for="">
+                    Specify type pet:
+                    <input asp-for="TypeAnimal" type="text">
+                </label>
+            </div>
+            <div class="form_row">
+                <label for="">
+                    Specify breed pet:
+                    <input asp-for="Breed" type="text">
+                </label>
+            </div>
+            <div class="form_row">
+                <label for="">
+                    Tell us about pet:
+                    <input asp-for="Description" type="text">
+                </label>
+            </div>
+            <div class="form_row">
+                <label for="">
+                    Specify the cost:
+                    <input asp-for="Price" type="number">
+                </label>
+            </div>
+            <button type="submit">Add new pet</button>
+        </form>
+    </div>
+</div>

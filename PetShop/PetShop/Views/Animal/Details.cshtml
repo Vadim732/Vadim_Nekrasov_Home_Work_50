@@ -4,16 +4,23 @@
     ViewBag.Title = "Detailed view of the pet";
 }
 
-<div class="row mt-5">
-    <div class="bg-dark text-white">
-        <img href="..." class="img-fluid mb-5" alt="Photo of a pet">
-        <p><strong>Id: </strong>@Model.Id</p>
-        <p><strong>Type animal: </strong>@Model.TypeAnimal</p>
-        <p><strong>Breed: </strong>@Model.Breed</p>
-        <p><strong>Age: </strong>@Model.Age</p>
-        <p><strong>Price: </strong>@Model.Price</p>
-        <div class="mt-5">
-            <h4 class="text-center">About pet</h4>
+
+<div class="bg-dark text-white pt-4 mt-5">
+    <div class="row px-5">
+        <div class="col-4 border-end border-white">
+            <h4 class="text-center mb-5">Info</h4>
+            <p><strong>Id: </strong>@Model.Id</p>
+            <p><strong>Type animal: </strong>@Model.TypeAnimal</p>
+            <p><strong>Breed: </strong>@Model.Breed</p>
+            <p><strong>Age: </strong>@Model.Age</p>
+            <p><strong>Price: </strong>@Model.Price</p>
+            <p class="text-center mt-3"><a asp-action="Index" asp-controller="Animal" class="btn btn-outline-light w-50">Back</a></p>
+        </div>
+        <div class="col-8 text-center">
+            <img href="@Model.Image" alt="Photo of a pet">
+        </div>
+        <div class="border-top border-white">
+            <h4 class="text-center mt-3">About pet</h4>
             <p>@Model.Description</p>
         </div>
     </div>

@@ -9,4 +9,5 @@ public class Animal
     public string Breed { get; set; }
     public int Price { get; set; }
     public string Description { get; set; }
+    public string Image { get; set; }
 }

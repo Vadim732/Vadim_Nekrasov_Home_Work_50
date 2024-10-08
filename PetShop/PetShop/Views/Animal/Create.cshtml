@@ -5,45 +5,40 @@
 }
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="bg-dark text-center pt-5 pb-4">
+        <h3 class="text-white mb-5">Fill out the form to add a new pet</h3>
         <form asp-action="Create" method="post">
-            <div class="form_row">
-                <label for="">
-                    Enter pet name:
-                    <input asp-for="Name" type="text">
+            <div class="form_row mb-3">
+                <label for="" class="col-4">
+                    <input type="text" class="form-control" asp-for="Name" placeholder="Enter pet name...">
                 </label>
             </div>
-            <div class="form_row">
-                <label for="">
-                    Indicate age pet:
-                    <input asp-for="Age" type="number">
+            <div class="form_row mb-3">
+                <label for="" class="col-4">
+                    <input type="number" class="form-control" asp-for="Age" placeholder="Indicate age pet...">
                 </label>
             </div>
-            <div class="form_row">
-                <label for="">
-                    Specify type pet:
-                    <input asp-for="TypeAnimal" type="text">
+            <div class="form_row mb-3">
+                <label for="" class="col-4">
+                    <input type="text" class="form-control" asp-for="TypeAnimal" placeholder="Specify type pet...">
                 </label>
             </div>
-            <div class="form_row">
-                <label for="">
-                    Specify breed pet:
-                    <input asp-for="Breed" type="text">
+            <div class="form_row mb-3">
+                <label for="" class="col-4">
+                    <input type="text" class="form-control" asp-for="Breed" placeholder="Specify breed pet...">
                 </label>
             </div>
-            <div class="form_row">
-                <label for="">
-                    Tell us about pet:
-                    <input asp-for="Description" type="text">
+            <div class="form_row mb-3">
+                <label for="" class="col-4">
+                    <textarea asp-for="Description" type="text" class="form-control" placeholder="Tell us about pet..." rows="3"></textarea>
                 </label>
             </div>
-            <div class="form_row">
-                <label for="">
-                    Specify the cost:
-                    <input asp-for="Price" type="number">
+            <div class="form_row mb-3">
+                <label for="" class="col-4">
+                    <input type="number" class="form-control" asp-for="Price" placeholder="Specify the cost...">
                 </label>
             </div>
-            <button type="submit">Add new pet</button>
+            <button type="submit" class="btn btn-outline-light mb-3 w-25">Add new pet</button>
         </form>
     </div>
 </div>

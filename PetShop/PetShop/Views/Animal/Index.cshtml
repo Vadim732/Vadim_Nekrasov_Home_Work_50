@@ -4,35 +4,35 @@
     ViewBag.Title = "Animals list";
 }
 
-<div class="container">
-    @if (Model != null && Model.Count != 0)
-    {
-        <table class="table table-striped">
-            <thead class="table-dark">
+@if (Model != null && Model.Count != 0)
+{
+    <table class="table table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>TypeAnimal</th>
+            <th>Breed</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var a in Model)
+        {
             <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>TypeAnimal</th>
-                <th>Breed</th>
-                <th>Price</th>
+                <td>@a.Name</td>
+                <td>@a.Age</td>
+                <td>@a.TypeAnimal</td>
+                <td>@a.Breed</td>
+                <td>@a.Price</td>
+                <td></td>
             </tr>
-            </thead>
-            <tbody>
-            @foreach (var a in Model)
-            {
-                <tr>
-                    <td>@a.Name</td>
-                    <td>@a.Age</td>
-                    <td>@a.TypeAnimal</td>
-                    <td>@a.Breed</td>
-                    <td>@a.Price</td>
-                </tr>
-            }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        <h4 class="text-center">Unfortunately, at the moment, pets have not added yet :с</h4>
-    }
-</div>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <h4 class="text-center">Unfortunately, at the moment, pets have not added yet :с</h4>
+}

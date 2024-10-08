@@ -26,7 +26,9 @@
                 <td>@a.TypeAnimal</td>
                 <td>@a.Breed</td>
                 <td>@a.Price</td>
-                <td></td>
+                <td>
+                    <a asp-action="Details" asp-controller="Animal" asp-route-animalId="@a.Id" class="btn btn-outline-dark">Details</a>
+                </td>
             </tr>
         }
         </tbody>

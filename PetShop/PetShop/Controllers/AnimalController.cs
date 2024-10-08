@@ -34,4 +34,15 @@ public class AnimalController : Controller
         }
         return View(animal);
     }
+
+    public IActionResult Details(int animalId)
+    {
+        Animal animal = _context.Animals.FirstOrDefault(a => a.Id == animalId);
+        if (animal != null)
+        {
+            return View(animal);
+        }
+
+        return NotFound();
+    }
 }

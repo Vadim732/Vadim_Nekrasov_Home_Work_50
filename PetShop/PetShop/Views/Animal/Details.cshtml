@@ -1,0 +1,16 @@
+﻿@model Animal
+
+@{
+    ViewBag.Title = "Detailed view of the pet";
+}
+
+<div class="row mt-5">
+    <div class="bg-dark text-white">
+        <p><strong>Id:</strong>@Model.Id</p>
+        <p><strong>Type animal:</strong>@Model.TypeAnimal</p>
+        <p><strong>Breed:</strong>@Model.Breed</p>
+        <p><strong>Age:</strong>@Model.Age</p>
+        <p><strong>Price:</strong>@Model.Price</p>
+        <p><strong>About pet:</strong>@Model.Description</p>
+    </div>
+</div>
